@@ -1,0 +1,14 @@
+version: '1.0.1'
+
+services:
+  app:
+    container_name: nodejs_v18.18.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      - PORT=3000
+    ports:
+      - 3000:3000

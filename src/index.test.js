@@ -82,4 +82,17 @@ describe('POST Requisitons', () => {
     });
     });
 
+    describe('POST Requisitons', () => {
+        it('should be not able create user', async () => {
+            const response = await request(server)
+            .post("/users")
+            .send({})
+            const {body, statusCode} = response;
+            expect(statusCode).toEqual(400);
+            
+            expect(body).toHaveProperty("message","Dados do usuário devem ser preeenchidos")
+            })
+        });
+
+
 

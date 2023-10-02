@@ -11,6 +11,11 @@ server.get('/', (req, res) => {
     })
 })
 
+server.post('/users', (req, res) => {
+    const {body} = req;
+    res.json({...body, id: 1}).status(200);
+})
+
 //forma de exportar o servidor para o externo
 module.exports = {
     server,

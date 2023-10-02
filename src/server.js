@@ -5,7 +5,10 @@ const server = express();
 server.use(express.json()); // nosso servidor vai expor os dados em formato json
 
 server.get('/', (req, res) => {
-    res.json({ welcome: "Hello World, Alex" })
+    res.json({ 
+        welcome: "Hello World, Alex",
+        batata: "Rustica",
+    })
 })
 
 //forma de exportar o servidor para o externo
